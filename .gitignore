@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# vscode
+.vs
+.vscode
+
+# Environments
+.env
+.venv
+.venv*
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# DS_Store (MacOS)
+.DS_Store
+
+# ruff
+.ruff_cache
+
+# AI agent local setup artifacts
+/.agents/skills
+/.claude/skills
+CLAUDE.md
+AGENTS.md
+OPINIONS.md
+
+# Data
+/data/
