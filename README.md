@@ -16,7 +16,7 @@ The corpus is C4 tokenized with the Llama 2 tokenizer in infini-gram's index for
 
 ## Setup
 
-Install [uv](https://docs.astral.sh/uv/) and make the Llama 2 tokenizer reachable, either through a Hugging Face login with access to `meta-llama/Llama-2-7b-hf` or by pointing `data.tokenizer.path` in the config at a local `tokenizer.json`.
+Install [uv](https://docs.astral.sh/uv/) and make the Llama 2 tokenizer reachable, either through a Hugging Face login with access to `meta-llama/Llama-2-7b-hf`.
 
 ```
 scripts/setup.sh    # uv sync
@@ -25,7 +25,7 @@ uv run pytest
 ```
 
 Every setting is in `configs/config.json`; its `run` section names the corpus (`10M`, `100M` or `1.2B`).
-Outputs go to `results/`: `results.json`, `pareto.png` and `steps_by_length.png`.
+Outputs go to `results/`.
 
 ## Results
 
