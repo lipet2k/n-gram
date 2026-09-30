@@ -16,7 +16,7 @@ The corpus is C4 tokenized with the Llama 2 tokenizer in infini-gram's index for
 
 ## Setup
 
-Install [uv](https://docs.astral.sh/uv/) and make the Llama 2 tokenizer reachable, either through a Hugging Face login with access to `meta-llama/Llama-2-7b-hf`.
+Install [uv](https://docs.astral.sh/uv/) and login to Hugging Face with access to `meta-llama/Llama-2-7b-hf` (you may need to request permission).
 
 ```
 scripts/setup.sh    # uv sync
