@@ -1,0 +1,33 @@
+{
+  "paths": {"data": "data", "heldout": "data/heldout", "results": "results"},
+  "index": {"token_bytes": 2, "separator": 65535, "page_bytes": 4096},
+  "build": {"tokenize_batch_docs": 512, "enumerate_chunk_ranks": 8388608, "table_write_chunk": 16777216},
+  "data": {
+    "c4_repo": "allenai/c4",
+    "shard_pattern": "en/c4-{split}.{index:05d}-of-{total:05d}.json.gz",
+    "shards_per_split": {"train": 1024, "validation": 8},
+    "tokenizer": {"repo": "meta-llama/Llama-2-7b-hf", "path": null},
+    "heldout": {"split": "validation", "shard": 0, "max_docs": 20000}
+  },
+  "caches": {"bound_bytes": 10, "fixed_depths": [1, 2, 3], "greedy_floor_depths": [0, 2]},
+  "corpora": {
+    "10M": {
+      "shards": [0],
+      "max_tokens": 10000000,
+      "greedy_budgets_bytes": [300000, 1000000, 3000000, 10000000, 30000000, 100000000, 300000000]
+    },
+    "100M": {
+      "shards": [0],
+      "max_tokens": 100000000,
+      "greedy_budgets_bytes": [1000000, 3000000, 10000000, 30000000, 100000000, 300000000, 1000000000, 3000000000]
+    },
+    "1.2B": {
+      "shards": [0, 1, 2, 3, 4, 5, 6, 7],
+      "max_tokens": 1200000000,
+      "greedy_budgets_bytes": [10000000, 30000000, 100000000, 300000000, 1000000000, 2000000000]
+    }
+  },
+  "queries": {"lengths": [1, 2, 3, 4, 5, 6, 8, 10], "per_length": 10000, "seed": 0},
+  "latency": {"queries": 1000, "query_length": 4},
+  "run": {"corpus": "10M", "rebuild": false}
+}
